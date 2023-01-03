@@ -49,52 +49,52 @@ def find_n_scheda(txt):
 def save_based_on_role(imgc, n_scheda, txt):
     # ruolo
     # dc
-    cv2.imwrite('TOTALE/' + n_scheda + txt + '.png', imgc)
+    cv2.imwrite('TOTALE/' + n_scheda +" - "+ txt + '.png', imgc)
     if (imgc[339, 415][1] > 200):
-        cv2.imwrite('DC/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('DC/' + n_scheda +" - "+ txt + '.png', imgc)
         return "DC"
     # terdx
     if (imgc[386, 411][1] > 200 or imgc[386, 444][1] > 200):
-        cv2.imwrite('TERDX/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('TERDX/' + n_scheda +" - "+ txt + '.png', imgc)
         return "TERDX"
     # med
     if (imgc[340, 443][1] > 200):
-        cv2.imwrite('M/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('M/' + n_scheda +" - "+ txt + '.png', imgc)
         return "M"
 
     # tc
     if (imgc[339, 515][1] > 200):
-        cv2.imwrite('TC/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('TC/' + n_scheda +" - "+ txt + '.png', imgc)
         return "TC"
 
     # pc
     if (imgc[340, 555][1] > 200):
-        cv2.imwrite('PC/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('PC/' + n_scheda +" - "+ txt + '.png', imgc)
         return "PC"
 
         # c/ts
     if (imgc[293, 480][1] > 200 or imgc[293, 515][1] > 200):
-        cv2.imwrite('TS/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('TS/' + n_scheda +" - "+ txt + '.png', imgc)
         return "TS"
 
     # c/td
     if (imgc[387, 480][1] > 200 or imgc[388, 517][1] > 200):
-        cv2.imwrite('TD/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('TD/' + n_scheda +" - "+ txt + '.png', imgc)
         return "TD"
 
     # cc
     if (imgc[340, 483][1] > 200):
-        cv2.imwrite('C/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('C/' + n_scheda +" - "+ txt + '.png', imgc)
         return "C"
 
     # TERSX
     if (imgc[293, 411][1] > 200 or imgc[293, 443][1] > 200):
-        cv2.imwrite('TERSX/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('TERSX/' + n_scheda +" - "+ txt + '.png', imgc)
         return "TERSX"
 
     # G
     if (imgc[340, 364][1] > 200):
-        cv2.imwrite('G/' + n_scheda + txt + '.png', imgc)
+        cv2.imwrite('G/' + n_scheda +" - "+ txt + '.png', imgc)
         return "G"
 
     return f"NON HO TROVATO"
