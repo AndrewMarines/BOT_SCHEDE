@@ -45,8 +45,8 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 def prepare_image(imgc):
     # nome
     img = cv2.cvtColor(imgc, cv2.COLOR_BGR2GRAY)  # convert to grey
-    #img = img[15:40, 428:1000]
-    img = img[0:30, 195:600]
+    #img = img[15:40, 428:1000] Skin base
+    img = img[0:30, 195:600] #skin che chi ha fatto i regen ha usato. sto bastardo
 
     # img = cv2.GaussianBlur(img, (5, 5), 3)
     # img = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 1, 5)
